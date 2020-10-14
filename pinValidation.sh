@@ -4,8 +4,8 @@ echo "Validation Of PIN Code"
 
 read -p "enter pincode: " pincode
 
-#uc-2 restrict pin taking alphabet or spcl characters at end
-pincode_Pattern="[0-9]{6}$"
+#uc-4 
+pincode_Pattern="^[0-9]{6}|[0-9]{3}[[:space:]][0-9]{3}$"
 if [[ $pincode =~ $pincode_Pattern ]]
 then
         echo "Valid"
